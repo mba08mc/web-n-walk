@@ -1,0 +1,653 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	
+
+
+
+
+
+
+
+
+
+
+
+<head>
+
+
+	
+		
+			<title>web'n'walk</title>
+		
+		
+	
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+	
+	<style type="text/css" media="screen, handheld">
+
+	
+	* { font-size: 10px; font-family: sans-serif; }
+
+	
+	* { margin: 0px; padding: 0px; } 
+
+	
+	a { color: black; }
+
+	
+	img { border: 0px; }
+
+	
+	img, input, select { vertical-align:middle; } 
+
+	
+	h1, h2, h3, h4, h5, h6, h7 { font-weight:bold; }
+
+	
+	.blockLayout-4-4 h1, .blockLayout-4-4 h2, .blockLayout-4-4 h3, .blockLayout-4-4 h4,
+	.blockLayout-4-4 h5, .blockLayout-4-4 h6, .blockLayout-4-4 h7, .blockLayout-4-4 p,
+	.blockLayout-4-4 .block { margin: 4px 4px 0px 4px; }
+
+	
+	.blockLayout-0-4 h1, .blockLayout-0-4 h2, .blockLayout-0-4 h3, .blockLayout-0-4 h4,
+	.blockLayout-0-4 h5, .blockLayout-0-4 h6, .blockLayout-0-4 h7, .blockLayout-0-4 p,
+	.blockLayout-0-4 .block { margin: 4px 0px 0px 0px; }
+
+	
+	#gestalt-navigation {text-align:right;padding-right: 5px}
+	.gestalt-dropdown {;z-index:99;position:absolute;background-color:white; border: solid 1px #ccc; padding: 3px; right: 5px; overflow: hidden;text-overflow:ellipsis}
+</style>
+
+<!--  viewports 3710 jls 29/03/10 -->
+
+	
+	
+	
+
+	<style type="text/css" media="screen, handheld">
+			/* Common */
+
+* { font-size: 10px; font-family: sans-serif; }
+* { margin: 0px; padding: 0px; } 
+
+a { 
+	color: #000; 
+	text-decoration:underline 
+}
+
+a.selected { 
+	color: #E4137C; 
+	font-weight: bold;
+	text-decoration:none;
+}			
+
+img { border: 0px; }	
+
+/* Default styles */
+
+h1 {
+	font-size: 100%;
+	margin: .25em 0 .5em 0;
+	padding: .25em;
+}
+h3 {
+	margin-left: 4px;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+p {
+	padding: 0 .25em .5em .25em;
+}
+
+
+/* Generic Module styles */
+h1.heading {
+	border-bottom:solid 1px #D1D1D1;
+	background: #E20074;
+	margin-top:0;
+	color: #FFFFFF;
+}
+.module h1 a, table.heading a:link{
+	color:#FFFFFF;
+}
+
+a.headinglink {
+	color:#FFFFFF;
+}
+
+.widgets-header-title.mini,
+.heading.mini {
+	border-bottom:solid 1px #D1D1D1;
+	background: #E20074;
+	margin:0em 0px 0.5em;
+	padding:.25em;
+	color:#FFFFFF
+}
+.widgets-header-title.mini h1,
+.heading.mini h1 {
+	border-bottom:0;
+	background: #E20074;
+	margin:5px 0 0 0;
+	padding:0;
+	display: inline-block;
+}
+.widgetheader-mini {
+	background:#EEEEEE;
+}
+.heading.mini a{
+	color:#FFFFFF;
+}
+
+.module {
+	background: #FFFFFF;
+	margin: .5em .25em;
+	padding: 0;
+}
+
+table.module-table {
+	width: 100%;
+}
+
+.module table.module-table img {
+	margin: 0 .5em .5em 5em;
+	vertical-align: top;
+}
+
+.module table.module-table thead tr {
+	margin-bottom: .25em;
+}
+
+.module table.module-table thead tr th h1 {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+table.heading {
+	background: #E20074;
+	margin-bottom: .5em;
+	color: #fff;
+}
+
+.module table.module-table img {
+	margin: 0 .5em .5em 0;
+	vertical-align: top;
+}
+
+/* Manually applied styles */
+.left {
+	text-align:left;
+}
+.right {
+	text-align:right;
+}
+
+/* Fragment Specific Styles */
+.nav {
+	background-color:#FFFFFF;
+	border-top:none;
+	margin: 0 0 1em 0;
+	border-bottom:2px solid #E20074; 
+	padding: .25em .25em .75em .5em;
+}
+
+.footer-logo {
+	background-color:#E20074;
+}
+
+div.module.header {
+	padding:0.5em 0.25em;
+	margin:0;
+}
+
+.module.footer {
+	border-top: solid 1px #D1D1D1;;
+	margin:0;
+	padding: .25em .25em .25em .5em;
+}
+
+
+
+/* Widgets */
+div.module.widgets-module {
+	padding: 0;
+	border: solid 1px #D1D1D1;
+}
+
+.module table thead tr th h1.widgets-header-title {
+	padding: .25em;
+}
+
+div.module.widgets-module table.widget-header {
+	width: 100%;
+}
+
+div.module.widgets-module .widget,
+div.widgetbar,
+div.edit-bookmarks .widget
+ {
+	border-top: solid 1px #D1D1D1;
+	border-bottom: solid 1px #D1D1D1;
+	margin-bottom: .5em;
+	padding: .4em 0 .3em 0;
+}
+
+div.module.catalogue, 
+div.module.porfolio, 
+div.module.bookmarks,
+div.module.edit-bookmarks {
+	border: solid 1px #D1D1D1;
+}
+
+div.module.widgets-module .widget.last,
+div.module.edit-bookmarks .widget.last {
+	border-bottom:none;
+}
+div.module.widgets-module .widget.first,
+div.module.edit-bookmarks .widget.first {
+	border-top: none;
+}
+
+div.module.widgets-module #mystuff h1 {
+	background: #E20074;
+	border-top: solid 1px #D1D1D1;
+	border-bottom: solid 1px #D1D1D1;
+	padding-left:.5em;
+}
+div.module.widgets-module #mystuff p{
+	padding-top: .25em;
+	margin-left:.5em;
+}
+div.module.widgets-module a#gotomystuff {
+	margin: 0 0 .5em .75em;
+	font-weight: bold;
+}
+
+
+#promolist {
+	margin: .75em .5em .75em .5em;
+}
+#promolist div.teaser {
+	padding-left: .75em;	
+	margin-bottom: .75em;
+	margin-top: .5em;
+}
+#promolist td.button {
+	width: 71px;
+}
+
+#promolist a.button {
+	width: 65px;
+	margin: 5px 2px 5px 2px;
+	overflow: hidden;
+	display:block;
+}
+#promolist.advanced a.button {
+	display:inline;
+}
+#button_infobox_content {
+	margin: 0 1em .75em 1em;
+}
+.category {
+	padding: 4px;
+	border-bottom: 1px solid #D1D1D1;
+}
+.category.last {
+	border-bottom: none;
+	padding-bottom: 1px;
+}
+.category-content {
+	background-color:#FFFFFF;
+	border-bottom: 1px solid #D1D1D1;
+}
+
+div.bookmarks {
+	padding-bottom: .5em;
+}
+div.new-bookmark {
+	margin-bottom: .5em;
+}
+
+table.page-heading {
+	border-bottom: 1px solid #D1D1D1;
+}
+table.page-heading p {
+	padding-left:0;
+}
+
+.notify {color:#E20074;}
+
+#addBook {
+	margin: .5em;
+}
+#addBook label,#addBook input {
+	display:block;
+}
+#addBook input {
+	margin-bottom: .5em;
+}
+
+a.showhide:link {
+	text-decoration:none;
+}
+
+.widgets-module .bookmark-mini {
+	background:#EEEEEE;
+	padding-bottom: .5em;
+	margin-bottom: .5em;
+}
+
+.widgets-module .bookmark {
+	border-bottom:1px solid #D1D1D1;
+	border-top:1px solid #D1D1D1;
+	margin: 0 0 .5em 0;
+
+}
+.widgets-module .bookmark a{
+	display: block;
+	height: 16px;
+	margin-bottom: .5em;
+}
+.widgets-module .bookmark h3 {
+
+	margin: 0 0 0 0;
+	padding: 1em 0 0 2px;
+	display: block;
+}
+
+hr {
+	color:#CCCCCC;
+}
+
+.sectionhead {
+	background: #E20074;
+}
+.headingtag {
+	background: #E20074;
+	color:#fff;
+	margin: .5em 0 .25em 0; 
+	padding: .25em;
+}
+
+.header_inner {color:#FFFFFF;}
+
+div.module.search {
+	text-align:center;
+}
+
+.box {
+	border: 1px solid #D1D1D1;
+	padding: 2px;
+}
+</style>
+		
+
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body style="background:#ffffff">
+
+	
+	<a name="top"></a>
+
+	
+	
+		<div style="width:228px; overflow:hidden">
+	
+
+	
+	
+	
+
+	
+	<a name="top"></a>
+	
+	
+
+		
+		
+
+
+
+
+
+
+<div class="module nav">
+
+	
+		
+		
+		
+		
+		
+			
+			
+
+			
+				
+					<a href="/web/20100715070452/http://www.t-mobile-favourites.co.uk/en/home/index.html" class="selected">Home</a>
+				
+				
+			
+		
+
+	
+		
+		
+		
+		
+		
+			 |	
+			
+
+			
+				
+				
+					<a href="/web/20100715070452/http://www.t-mobile-favourites.co.uk/en/localmall/index.html">Maps</a>
+				
+			
+		
+
+	
+		
+		
+		
+		
+		
+			 |	
+			
+
+			
+				
+				
+					<a href="/web/20100715070452/http://www.t-mobile-favourites.co.uk/en/music/landing.html">Music</a>
+				
+			
+		
+
+	
+		
+		
+		
+		
+		
+
+	
+		
+		
+		
+		
+		
+			 |	
+			
+
+			
+				
+				
+					<a href="/web/20100715070452/http://www.t-mobile-favourites.co.uk/en/home/games.html">Games</a>
+				
+			
+		
+
+	
+		
+		
+		
+		
+		
+
+	
+		
+		
+		
+		
+		
+			 |	
+			
+
+			
+				
+				
+					<a href="/web/20100715070452/http://www.t-mobile-favourites.co.uk/en/home/tv_new.html">TV &amp; Video</a>
+				
+			
+		
+
+	
+
+	
+
+</div>
+<div class="module ">
+	<h1 class="heading">What is Web'n'Walk?</h1>
+	<p>Browse the entire internet on your mobile, just like you do on a computer:-</p>
+<p>1.&#160;You can visit any site you want</p>
+<p>2.&#160;You can send and receive emails</p>
+<p>3.&#160;You can do all the same things - search, read, shop and interact</p>
+<p>4.&#160;Normal-sized web pages load in a few seconds</p>
+<p>Plus - you can use it wherever you have mobile coverage!</p>
+<p>If you also want to use instant messaging, Voice over IP, or use your phone as a modem then go to&#160;<a href="/web/20100715070452/http://www.t-mobile-favourites.co.uk/redirector.do?source=LINK&amp;redirectTo=http%3A%2F%2Fwww.t-mobile.co.uk%2Fwebnwalk">www.t-mobile.co.uk/webnwalk</a>&#160;to find out about Web&#39;n&#39;Walk Plus and Web&#39;n&#39;Walk Max.</p></div><div class="module ">
+	<h1 class="heading">What does Web'n'Walk cost?</h1>
+	<p><strong>Pay Monthly customers</strong></p>
+<p>&#160;</p>
+<p>Web&#39;n&#39;Walk priceplan or monthly option</p>
+<p>&#160;</p>
+<p>If you have a Web&#39;n&#39;Walk priceplan or monthly option then you already have unlimited use of the internet included.</p>
+<p>&#160;</p>
+<p>You can add the Web&#39;n&#39;Walk monthly option for just &#163;7.50 per month &#8211; just call our automated service on 879 from your mobile.</p>
+<p></p>
+<p>&#160;</p>
+<p>Alternatively you can browse the internet and email as much as you like and the most you&#39;ll pay is &#163;1 per day.</p>
+<p>&#160;</p>
+<p><strong>Pay Monthly customers</strong> who joined T-mobile before December 1st 2006 will need to text YES to 3064 to get the &#163;1 a day rate.</p>
+<p>&#160;</p>
+<p><strong>Pay as you Go customers</strong></p>
+<p>You can browse the internet and email as much as you like and the most you&#39;ll pay is &#163;1 per day.</p></div><div class="module ">
+	<h1 class="heading">Content lock &amp; child protection</h1>
+	<p>Making sure children can use mobiles safely is a top priority for us.</p>
+<p>T-Mobile have developed a system called Content lock which helps prevent children from accessing sites containing 18-rated material or unmoderated user generated content. This includes social networks, blogging sites and chat &amp; dating sites such as My space, Facebook and Blogger as well as 18-rated adult services.</p>
+<p>All of our mobiles are sold with Content Lock <strong>turned on.</strong></p>
+<p>However, if you&#8217;re over 18 you can remove Content Lock. You can verify your age by credit card or by a name and address check through a credit reference agency.</p>
+<p>To switch content lock off please call 1818 from your mobile</p>
+<p>See also our <a href="/web/20100715070452/http://www.t-mobile-favourites.co.uk/en/home/child_safety.html">advice for parents</a> page.</p></div><div class="module ">
+	<h1 class="heading">What is My Stuff and how does it work?</h1>
+	<p>My Stuff is a section where you can add mini web applications or &#39;widgets&#39; &#160;to your W&#39;n&#39;W homepage in order to bring some of your most common web sites and activities closer to you. Your page can be personalised in this way by using cookies and tokens on your phone&#8217;s browser.</p></div><div class="module ">
+	<h1 class="heading">Who do I contact if I have a problem with My Stuff?</h1>
+	<p>For any problems with web&#39;n&#39;walk from price plan issues to widget issues, please contact Customer Services as normal on 150 from your T-Mobile handset or email <a href="https://web.archive.org/web/20100715070452/mailto:customerservices@t-mobile.net">customerservices@t-mobile.net</a>.</p></div><div class="module ">
+	<h1 class="heading">Will my details be secure?</h1>
+	<p>Yes, T-Mobile will not store any of your passwords or account details. They will all be kept with the application provider. We have created a highly secure system for managing quick login with your providers, for example, to place a bid with Ebay, you will need to actively sign in when prompted as you would do normally.</p></div><div class="module ">
+	<h1 class="heading">Does My Stuff cost anything?</h1>
+	<p>No, &#39;My Stuff&#39; is part of Web&#39;n&#39;Walk, so it comes as part of your normal W&#39;n&#39;W or other data tariff. There are no additional charges for any of the things you can add to your homepage.</p></div><div class="module ">
+	<h1 class="heading">Can I make my homepage faster?</h1>
+	<p>If your homepage takes too long to load there may be a network issue. You could try again in a less busy place or time. Alternatively the homepage may be slower because of things you have added to My Stuff. To make it faster you can try to keep items closed when you are not using them, or you can remove them altogether. To do this, just click on the &#39;Edit&#39; button and then select the &#39;Remove&#39; link for the appropriate service.</p></div><div class="module ">
+	<h1 class="heading">What happens to My Stuff if I change my handset or sim?</h1>
+	<p>In most cases, if you change your handset or your sim, the cookies will be lost and your personalised links will be deleted. You will therefore need to set them up again.</p></div><div class="module ">
+	<h1 class="heading">How do I get rid of widgets from my homepage?</h1>
+	<p>If you want to get rid of widgets, click on the &#39;Edit&#39; button in the My Stuff box and you&#39;ll see all the&#160;widgets you have already added to your homepage. Next to each one there is a link saying &#39;Remove&#39;. Just click this link, confirm that you do want to delete it, and it will be removed.</p></div><div class="module ">
+	<h1 class="heading">Can I change the order of My Stuff?</h1>
+	<p>Widgets&#160;within My Stuff will stack in the order that you set them up, so the only way you can move things up or down the page will be to remove them and add them again in the required order. In the future we&#8217;ll provide a way to move things around more easily.</p></div><div class="module ">
+	<h1 class="heading">When will new applications be available?</h1>
+	<p>We are continuously working to add new applications to My Stuff, so we recommend you check on a regular basis. The best way to see&#160;what&#39;s available is to click &#39;See all available stuff&#39; on the homepage.</p></div><div class="module ">
+	<h1 class="heading">Do I need to login to My Stuff?</h1>
+	<p>No, we will recognise you from your handset. However, you will need to login to see some of your personal accounts and make a bid on Ebay for example. This is for security reasons.</p></div><div class="module ">
+	<h1 class="heading">Can I create a new email or ebay account in My Stuff?</h1>
+	<p>No, but there is nothing to stop you setting up a new account on their web site, then setting up a shortcut within My Stuff once you have your new login details.</p></div><div class="module ">
+	<h1 class="heading">What is History?</h1>
+	<p>History is the place where the last sites you visited are listed. It is designed to save you time if you often visit the same sites. It will include web addresses that you entered, links from the homepage and any&#160;Yahoo! search result pages. Up to 10 pages will be listed here, and they will be the pages you visited most recently.</p></div><div class="module ">
+	<h1 class="heading">What is an RSS feed?</h1>
+	<p>An RSS or News feed allows you to read new content from websites as it is published.&#160; The content, which could be headlines or other information is delivered by a feed from its original website to your phone (or PC) without you having to visit the originating website.<br><br>Feeds are also known as RSS. There is some discussion as to what RSS stands for, but most people plump for &#39;Really Simple Syndication&#39;. In essence, the feeds themselves are just web pages, designed to be read by computers rather than people.</p></div><div class="module ">
+	<h1 class="heading">How many feeds can I add to my homepage?</h1>
+	<p>You can add as many as you want, but they will take up a certain amount of space, so you may choose not to add too many. On many phones you can view the feed as a ticker &#8211; just one headline at a time, so this may be a good way of saving space. You will see this option on the screen as you set up your feeds.</p></div><div class="module ">
+	<h1 class="heading">Watching TV on your mobile</h1>
+	<p>Many websites allow you to watch streamed TV or videos on your computer. However these services use software that is not available for mobile phones.</p>
+<p>T-Mobile&#8217;s mobile TV service offers a great selection of channels including live sky channels <a href="/web/20100715070452/http://www.t-mobile-favourites.co.uk/en/home/tv.html">Click here</a> to find out more (compatible handset required)</p></div><div class="module ">
+	<h1 class="heading">Set up your email</h1>
+	<p>Sending and receiving emails on your phone is included within your web &#39;n&#39; walk priceplan or day pass.</p>
+<p>&#160;</p>
+<p>There are 3 ways of managing email on your phone:-</p>
+<p>&#160;</p>
+<p>1.&#160;Set up your email account to deliver the emails directly to your phone whenever you ask it to&#160;<a href="/web/20100715070452/http://www.t-mobile-favourites.co.uk/redirector.do?source=LINK&amp;redirectTo=http%3A%2F%2Fwww.t-zones.co.uk%2Flinkto%3FID%3D7856">click here</a>. N.B. This does not work for Hotmail.</p>
+<p>&#160;</p>
+<p>2.&#160;Online using your phone&#39;s browser - simply go to the relevant web page for your email service provider eg.&#160;<a href="/web/20100715070452/http://www.t-mobile-favourites.co.uk/redirector.do?source=LINK&amp;redirectTo=http%3A%2F%2Fwww.hotmail.com%2F">www.hotmail.com</a>&#160;</p>
+<p>&#160;</p>
+<p>3. Via an application on your phone - some email service providers have a downloadable application or client eg. for google mail go to <a href="/web/20100715070452/http://www.t-mobile-favourites.co.uk/redirector.do?source=LINK&amp;redirectTo=http%3A%2F%2Fgmail.com%2Fapp%2F">http://gmail.com/app/</a></p>
+<p>&#160;</p>
+<p>For instant email or Blackberry email please go to <a href="/web/20100715070452/http://www.t-mobile-favourites.co.uk/redirector.do?source=LINK&amp;redirectTo=http%3A%2F%2Fwww.t-mobile.co.uk%2Fservices%2Femail-solutions%2F">www.t-mobile.co.uk/services/email-solutions/</a>.</p></div><div class="module ">
+	<h1 class="heading">Buying music, games, videos</h1>
+	<p>You can buy full track music, ringtones, games, videos and pictures from T-Mobile via the tabs on the top of the Web&#39;n&#39;Walk homepage, or via the &#39;all our downloads&#39; banner.</p>
+<p>&#160;</p>
+<p>If your handset does not have those tabs then you can access the content via t-zones. T-zones is the home of all our mobile downloads.</p>
+<p>&#160;</p>
+<p>Get to t-zones by selecting the t-zones or web icon from your phone&#39;s menu, or from the bookmarks on the Web&#39;n&#39;Walk homepage.</p>
+<p>&#160;</p>
+<p>Buying from T-Mobile gives you the assurance that:-</p>
+<p>&#160;</p>
+<p>1.&#160;You are getting the best price in the market</p>
+<p>&#160;</p>
+<p>2.&#160;The charges appear clearly on your bill</p>
+<p>&#160;</p>
+<p>3. You are not charged for browsing while you are downloading the content</p>
+<p>&#160;</p>
+<p>4. You will not get tricked into subscribing for something you don&#39;t want You have the security of our customer services to help you if anything goes wrong.</p></div><!-- /en/home/help.html -->	
+
+	
+	 
+	
+		
+		
+
+	
+
+	
+	
+	
+
+	
+	
+		</div>
+	
+
+	
+	
+
+	
+	
+
+</body>
+
+
+
+</html>
